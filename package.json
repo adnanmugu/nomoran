@@ -1,0 +1,19 @@
+{
+  "name": "nomoran",
+  "version": "1.0.0",
+  "description": "number incerment generator web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnanmugu/nomoran.git"
+  },
+  "author": "adnanmugu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adnanmugu/nomoran/issues"
+  },
+  "homepage": "https://github.com/adnanmugu/nomoran#readme"
+}
