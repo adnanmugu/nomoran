@@ -1,0 +1,92 @@
+$bgcolor: #c5c3c3;
+$mute-color: hsl(0, 3, 20, 40%);
+$primary-color: #353232;
+$side-bar: 64px;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.space-mono-regular {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+// main
+input {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 2px 3px 2px 3px;
+}
+input:focus {
+  outline: none;
+}
+body {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: $primary-color;
+  padding: 1rem $side-bar 1rem $side-bar;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $bgcolor;
+}
+
+.header {
+  display: flex;
+  background-color: blue;
+  height: 32px;
+  &__social {
+    display: flex;
+  }
+}
+
+.content {
+  &__main {
+    display: flex;
+    gap: 1rem;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    height: 40px;
+    input {
+      color: $mute-color;
+      width: 148px;
+      height: 24px;
+      border-radius: 4px;
+      border: 2px solid $primary-color;
+      background-color: $bgcolor;
+    }
+    &--mute {
+      color: $mute-color;
+      input {
+        border: 2px solid $mute-color;
+      }
+    }
+  }
+}

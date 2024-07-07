@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+input {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 2px 3px 2px 3px;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #353232;
+  padding: 1rem 64px 1rem 64px;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #c5c3c3;
+}
+
+.header {
+  display: flex;
+  background-color: blue;
+  height: 32px;
+}
+.header__social {
+  display: flex;
+}
+
+.content__main {
+  display: flex;
+  gap: 1rem;
+}
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.content__input {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+.content__input input {
+  color: hsla(0, 3%, 20%, 0.4);
+  width: 148px;
+  height: 24px;
+  border-radius: 4px;
+  border: 2px solid #353232;
+  background-color: #c5c3c3;
+}
+.content__input--mute {
+  color: hsla(0, 3%, 20%, 0.4);
+}
+.content__input--mute input {
+  border: 2px solid hsla(0, 3%, 20%, 0.4);
+}
+
+/*# sourceMappingURL=main.css.map */

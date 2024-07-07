@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>nomoran</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">NOMORAN</div>
+      <div class="header__social">
+        <div class="header__social-icon">twitter</div>
+        <div class="header__social-icon">github</div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="wrapper">
+        <div class="content">
+          <h1 class="content__title">Untitled</h1>
+          <div class="content__main">
+            <div class="content__wrapper">
+              <div class="content__input">
+                <label for="row-length">row length</label>
+                <input
+                  placeholder="number..."
+                  type="text"
+                  name="row-length"
+                  id="row-length"
+                />
+              </div>
+              <div class="content__input">
+                <label for="column-length">column length</label>
+                <input
+                  placeholder="number ..."
+                  type="text"
+                  name="column-length"
+                  id="column-length"
+                />
+              </div>
+              <div class="content__input">
+                <label for="leading-zero">leading zero</label>
+                <select name="leading-zero" id="leading-zero">
+                  <option value="tens">0x</option>
+                  <option value="hundreds">00x</option>
+                  <option value="thousands">000x</option>
+                </select>
+              </div>
+            </div>
+            <div class="content__wrapper">
+              <div class="content__input">
+                <label for="first-value">first value</label>
+                <input
+                  placeholder="number..."
+                  type="text"
+                  name="first-value"
+                  id="first-value"
+                />
+              </div>
+              <div class="content__input content__input--mute">
+                <label for="last-value">last value</label>
+                <input
+                  placeholder="number..."
+                  type="text"
+                  name="last-value"
+                  id="first-value"
+                />
+              </div>
+              <div class="content__input">
+                <label for="leading-zero">increment type</label>
+                <select name="leading-zero" id="leading-zero">
+                  <option value="tens">number</option>
+                  <option value="hundreds">barcode</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
