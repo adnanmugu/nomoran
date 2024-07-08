@@ -47,16 +47,37 @@ body {
 
 .header {
   display: flex;
-  background-color: blue;
+  background-color: green;
   height: 32px;
 }
 .header__social {
   display: flex;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+.wrapper__icon {
+  display: flex;
+  justify-content: start;
+  gap: 0.8rem;
+}
+.wrapper__icon--top {
+  margin-top: 0.5rem;
+}
+
+.content__title {
+  margin: 12px 0 12px 0;
+}
 .content__main {
   display: flex;
   gap: 1rem;
+}
+.content__main--icons {
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .content__wrapper {
   display: flex;
@@ -81,6 +102,10 @@ body {
 }
 .content__input--mute input {
   border: 2px solid hsla(0, 3%, 20%, 0.4);
+}
+
+.icon svg {
+  color: #353232;
 }
 
 /*# sourceMappingURL=main.css.map */

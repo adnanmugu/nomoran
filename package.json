@@ -4,7 +4,6 @@
   "description": "number incerment generator web app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "sass --watch sass/main.scss:public/assets/css/main.css"
   },
   "repository": {
