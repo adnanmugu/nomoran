@@ -38,13 +38,17 @@
                   id="column-length"
                 />
               </div>
-              <div class="content__input">
-                <label for="leading-zero">leading zero</label>
-                <select name="leading-zero" id="leading-zero">
-                  <option value="tens">0x</option>
-                  <option value="hundreds">00x</option>
-                  <option value="thousands">000x</option>
-                </select>
+              <div class="content__input select">
+                <div class="select__title">leading zero</div>
+                <div class="select__selected">0x</div>
+                <div class="select__items">
+                  <div>0x</div>
+                  <div>00x</div>
+                  <div>000x</div>
+                  <div>0000x</div>
+                  <div>00000x</div>
+                  <div>000000x</div>
+                </div>
               </div>
             </div>
             <div class="content__wrapper">
@@ -66,6 +70,7 @@
                   id="first-value"
                 />
               </div>
+
               <div class="content__input">
                 <label for="leading-zero">increment type</label>
                 <select name="leading-zero" id="leading-zero">
@@ -75,6 +80,7 @@
               </div>
             </div>
           </div>
+          <div class="content__button"><button>generate</button></div>
         </div>
 
         <div class="content">
@@ -215,5 +221,31 @@
         <div class="content">div.content__line</div>
       </div>
     </main>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const selectSelected = document.querySelector('.select__selected');
+        const selectItems = document.querySelector('.select__items');
+
+        selectSelected.addEventListener('click', () => {
+          selectSelected.classList.toggle('select-arrow-active');
+          selectItems.classList.toggle('select-hide');
+        });
+
+        selectItems.addEventListener('click', (e) => {
+          if (e.target.tagName === 'DIV') {
+            selectSelected.innerHTML = e.target.innerHTML;
+            selectItems.classList.add('select-hide');
+            selectSelected.classList.remove('select-arrow-active');
+          }
+        });
+
+        document.addEventListener('click', (e) => {
+          if (!selectSelected.contains(e.target)) {
+            selectItems.classList.add('select-hide');
+            selectSelected.classList.remove('select-arrow-active');
+          }
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,5 +1,6 @@
 $bgcolor: #c5c3c3;
 $mute-color: hsl(0, 3, 20, 40%);
+$bg-button: #a7a5a5;
 $primary-color: #353232;
 $side-bar: 64px;
 
@@ -98,6 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 40px;
+
     input {
       color: $mute-color;
       width: 148px;
@@ -106,6 +108,13 @@ body {
       border: 2px solid $primary-color;
       background-color: $bgcolor;
     }
+
+    select {
+      background-color: red;
+      height: 24px;
+      width: 148px;
+    }
+
     &--mute {
       color: $mute-color;
       input {
@@ -113,6 +122,71 @@ body {
       }
     }
   }
+
+  &__button {
+    margin-top: 2rem;
+    button {
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 6px;
+      font-size: 16px;
+      background-color: $bg-button;
+      border: none;
+      border-radius: 4px;
+      height: 34px;
+      width: 164px;
+      box-shadow: 3px 3px 0 0 $primary-color;
+      cursor: pointer;
+      // transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: 0.1s ease;
+    }
+    button:hover {
+      // transition: 0.2s ease;
+      transform: translate(3px, 3px);
+      box-shadow: 0px 0px 0 0 $primary-color;
+    }
+  }
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+  // &__select {
+  //   display: none;
+  // }
+  &__selected {
+    background-color: $bgcolor;
+    color: $mute-color;
+    width: 156px;
+    height: 26px;
+    border: 2px solid $primary-color;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  &__items {
+    cursor: pointer;
+    border-bottom: 2px solid $primary-color;
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &__items {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    overflow-y: auto;
+    display: none;
+    max-height: 200px;
+  }
+}
+
+.select__selected.select-arrow-active + .select__items {
+  display: block;
 }
 
 .icon {

@@ -97,11 +97,73 @@ body {
   border: 2px solid #353232;
   background-color: #c5c3c3;
 }
+.content__input select {
+  background-color: red;
+  height: 24px;
+  width: 148px;
+}
 .content__input--mute {
   color: hsla(0, 3%, 20%, 0.4);
 }
 .content__input--mute input {
   border: 2px solid hsla(0, 3%, 20%, 0.4);
+}
+.content__button {
+  margin-top: 2rem;
+}
+.content__button button {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6px;
+  font-size: 16px;
+  background-color: #a7a5a5;
+  border: none;
+  border-radius: 4px;
+  height: 34px;
+  width: 164px;
+  box-shadow: 3px 3px 0 0 #353232;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.content__button button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0 0 #353232;
+}
+
+.select {
+  position: relative;
+  display: inline-block;
+}
+.select__selected {
+  background-color: #c5c3c3;
+  color: hsla(0, 3%, 20%, 0.4);
+  width: 156px;
+  height: 26px;
+  border: 2px solid #353232;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.select__items {
+  cursor: pointer;
+  border-bottom: 2px solid #353232;
+}
+.select__items:hover {
+  background-color: red;
+}
+.select__items {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  overflow-y: auto;
+  display: none;
+  max-height: 200px;
+}
+
+.select__selected.select-arrow-active + .select__items {
+  display: block;
 }
 
 .icon svg {
