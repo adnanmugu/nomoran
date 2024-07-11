@@ -23,6 +23,12 @@
   font-style: italic;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
 input {
   font-family: "Space Mono", monospace;
   font-weight: 700;
@@ -102,6 +108,24 @@ body {
 }
 .content__input--mute input {
   border: 2px solid hsla(0, 3%, 20%, 0.4);
+}
+.content__wrapper-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.content__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  gap: 0.8rem;
+}
+.content__list--circle {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  background-color: black;
 }
 .content__button {
   margin-top: 3rem;

@@ -31,15 +31,22 @@ $side-bar: 64px;
 }
 
 // main
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
 input {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   font-size: 1rem;
   padding: 2px 3px 2px 3px;
 }
+
 input:focus {
   outline: none;
 }
+
 body {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -85,7 +92,7 @@ body {
 
     &--icons {
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.2rem;
     }
   }
 
@@ -109,12 +116,6 @@ body {
       background-color: $bgcolor;
     }
 
-    select {
-      background-color: red;
-      height: 24px;
-      width: 148px;
-    }
-
     &--mute {
       color: $mute-color;
       input {
@@ -123,15 +124,35 @@ body {
     }
   }
 
+  &__wrapper-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    gap: 0.8rem;
+    &--circle {
+      height: 0.5rem;
+      width: 0.5rem;
+      border-radius: 50%;
+      background-color: black;
+    }
+  }
+
   &__button {
-    margin-top: 2rem;
+    margin-top: 3rem;
     button {
       font-family: 'Space Mono', monospace;
       font-weight: 700;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-bottom: 6px;
+      padding-bottom: 5px;
       font-size: 16px;
       background-color: $bg-button;
       border: none;
@@ -171,7 +192,8 @@ body {
     cursor: pointer;
     border-bottom: 2px solid $primary-color;
     &:hover {
-      background-color: red;
+      background-color: $bgcolor;
+      color: $mute-color;
     }
   }
 
