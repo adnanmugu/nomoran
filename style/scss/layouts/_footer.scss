@@ -1,0 +1,37 @@
+// footer
+.foot {
+  width: 100%;
+  padding: 0.7rem 0rem;
+  border-top: 1px solid $border-muted;
+  color: $text-secondary;
+  font-size: $small;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  @include media("<=440px") {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__menus {
+    font-weight: 400;
+    display: flex;
+    gap: 0.5rem;
+    @include media("<=440px") {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      gap: 1rem;
+    }
+  }
+}

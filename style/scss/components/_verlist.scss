@@ -1,0 +1,48 @@
+.verlist {
+  &__wrapper {
+    padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+    // background-color: yellow;
+  }
+  &__posts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid $card-1;
+    padding: 0 0.5rem 0 0.7rem;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 99;
+      top: 0.21rem;
+      left: -0.33rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $card-1;
+    }
+  }
+  &__first {
+    width: 15px;
+    height: 15px;
+    background-color: $theme-dark-bg;
+    position: absolute;
+    top: -0.28rem;
+    left: -0.5rem;
+  }
+  &__date {
+    display: flex;
+    font-size: $small;
+    color: $text-secondary;
+    margin-bottom: 0.5rem;
+  }
+  &__post-title {
+    position: relative;
+    font-size: $small;
+    font-weight: $semibold;
+    color: $text-primary;
+    padding-bottom: 0.5rem;
+    &:hover {
+      color: $text-link;
+    }
+  }
+}

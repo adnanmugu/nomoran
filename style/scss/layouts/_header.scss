@@ -1,0 +1,109 @@
+// header
+.nav {
+  padding: 1rem 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media("<=440px") {
+    width: 100%;
+  }
+  &__logo {
+    display: flex;
+  }
+  &__search {
+    display: inline-flex;
+    @include media("<=440px") {
+      display: none;
+    }
+  }
+  &__menus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include media("<=440px") {
+      display: none;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  &__link {
+    color: $text-secondary;
+    @include media("<=440px") {
+      font-size: 14px;
+      font-weight: $medium;
+      padding: 0.4rem 0.6rem;
+    }
+    &:hover {
+      color: $text-primary;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
+    &--active {
+      color: $text-primary;
+      @include media("<=440px") {
+        font-size: 14px;
+        font-weight: $medium;
+        padding: 0.4rem 0.6rem;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  // avatar
+  &__togle {
+    display: none;
+    position: relative;
+    @include media("<=440px") {
+      display: flex;
+    }
+  }
+  &__mobile-menu {
+    display: none;
+    @include media("<=440px") {
+      display: block;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      z-index: 999;
+      font-size: $medium;
+      color: $text-secondary;
+      background-color: $card-0;
+      border-radius: 6px;
+      box-shadow: 2px 2px 6px $black;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+  &__avatar {
+    display: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    &::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      background-color: $green-2;
+      border: 1px solid $theme-dark-bg;
+    }
+    &__img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  &__login {
+    font-weight: 500;
+  }
+}

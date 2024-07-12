@@ -4,7 +4,7 @@
   "description": "number incerment generator web app",
   "main": "index.js",
   "scripts": {
-    "watch-sass": "sass --watch sass/main.scss:public/assets/css/main.css"
+    "watch-sass": "sass --watch style/scss/main.scss:public/assets/css/main.css"
   },
   "repository": {
     "type": "git",

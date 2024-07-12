@@ -1,0 +1,71 @@
+// utilities
+
+.border-bot {
+  border-bottom: 1px solid $border-muted;
+  padding-bottom: 0.3rem;
+}
+.gap-0 {
+  gap: 0;
+}
+.gap-03 {
+  gap: 0.3rem;
+}
+.text-second-13 {
+  color: $text-secondary;
+  font-size: 13px;
+}
+.mr-05 {
+  margin-right: 0.5rem;
+}
+.ml-05 {
+  margin-left: 0.5rem;
+}
+.mb-05 {
+  margin-bottom: 0.5rem;
+}
+.mt-05 {
+  margin-top: 0.5rem;
+}
+.w-100 {
+  width: 100%;
+}
+
+.result-posts {
+  color: $text-link;
+  font-weight: 500;
+}
+
+.mobile-none {
+  display: block;
+  @include media("<=440px") {
+    display: none;
+  }
+}
+
+.btn-link {
+  color: $text-secondary;
+  background-color: transparent;
+  font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    transition: 0.3s;
+    color: $text-primary;
+  }
+}
+
+.disabled {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+  color: $text-secondary;
+  background-color: $green-7;
+  &:hover {
+    color: $text-secondary;
+    background-color: $green-7;
+  }
+}
+
+.wrap {
+  width: 100%;
+  flex-wrap: wrap;
+}

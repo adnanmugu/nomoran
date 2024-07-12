@@ -1,0 +1,63 @@
+// style reset
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// size large 1232px margin rl 60px
+body {
+  font-size: 14px;
+  font-family: "Segoe UI";
+  color: $text-primary;
+  background-color: $theme-dark-bg;
+  max-width: 1132px;
+  // padding: 0 110px;
+  margin: 0 auto;
+  // padding: 0 110px;
+  // width: 1132px;
+  @include media("<=440px") {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  @include media(">=764px", "<1210px") {
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $text-link;
+  &:hover {
+    text-decoration: underline;
+    transition: 0.3s ease;
+  }
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.92rem;
+  background-color: $gray-6;
+  &-thumb {
+    border: 1px solid $gray-6;
+    background-color: $gray-5;
+    border-radius: 2px;
+    cursor: pointer;
+    &:active {
+      background-color: $gray-4;
+      transition: 0.2s ease;
+    }
+  }
+}
