@@ -2,9 +2,13 @@
   "name": "nomoran",
   "version": "1.0.0",
   "description": "number incerment generator web app",
-  "main": "index.js",
+  "main": "src/page.js",
   "scripts": {
-    "watch-sass": "sass --watch style/scss/main.scss:public/assets/css/main.css"
+    "scss": "sass --watch style/scss/main.scss:src/app/globals.css",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",

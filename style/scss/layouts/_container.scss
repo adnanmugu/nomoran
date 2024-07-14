@@ -5,13 +5,13 @@
   width: 100%;
   gap: 1rem;
   // max-width: 1132px;
-  @include media("<=440px") {
+  @include media('<=440px') {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 1rem;
   }
-  @include media(">=764px", "<1210px") {
+  @include media('>=764px', '<1210px') {
     width: 100%;
     gap: 1rem;
   }
@@ -23,7 +23,7 @@
   width: 100%;
   gap: 1rem;
   // background-color: red;
-  @include media("<=440px") {
+  @include media('<=440px') {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -34,13 +34,14 @@
   }
   &--content {
     display: flex;
+    background-color: red;
     gap: 1rem;
-    @include media("<=440px") {
+    @include media('<=440px') {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-    @include media(">=764px", "<1210px") {
+    @include media('>=764px', '<1210px') {
       width: 100%;
     }
   }
@@ -53,12 +54,12 @@
     // width: 300px;
     // width: 18.75rem;
     width: 17.5rem;
-    @include media("<=440px") {
+    @include media('<=440px') {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
-    @include media(">=764px", "<1210px") {
+    @include media('>=764px', '<1210px') {
       width: 35%;
     }
   }
@@ -67,17 +68,17 @@
     // width: 816px;
     // 836px
     width: 52.25rem;
-    @include media("<=440px") {
+    @include media('<=440px') {
       width: 100%;
     }
-    @include media(">=764px", "<1210px") {
+    @include media('>=764px', '<1210px') {
       width: 65%;
     }
   }
   &--200 {
     @extend .container;
     width: 200px;
-    @include media("<=440px") {
+    @include media('<=440px') {
       width: 100%;
     }
   }
@@ -85,7 +86,7 @@
     @extend .container;
     width: 916px;
     // width: 52.25rem;
-    @include media("<=440px") {
+    @include media('<=440px') {
       width: 100%;
     }
   }
@@ -96,14 +97,14 @@
   gap: 1rem;
   &--search {
     display: none;
-    @include media("<=440px") {
+    @include media('<=440px') {
       display: flex;
       width: 100%;
     }
   }
   &--box-s {
     @extend .wrapper;
-    @include media("<=440px") {
+    @include media('<=440px') {
       display: flex;
       gap: 0;
     }
@@ -138,7 +139,7 @@
       width: 230px;
       height: 100%;
     }
-    @include media("<=440px") {
+    @include media('<=440px') {
       width: 100%;
       height: 100%;
     }
