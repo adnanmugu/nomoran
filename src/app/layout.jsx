@@ -1,4 +1,5 @@
 // const inter = Inter({ subsets: ['latin'] });
+import 'src/app/globals.css';
 
 export const metadata = {
   title: 'Nomoran',

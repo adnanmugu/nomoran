@@ -1,0 +1,8 @@
+.container {
+  width: 10rem;
+  display: flex;
+  flex-direction: row;
+  &--content {
+    background-color: blue;
+  }
+}
