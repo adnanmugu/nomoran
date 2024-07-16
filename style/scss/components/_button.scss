@@ -1,43 +1,20 @@
 // button
-.btn-outline {
+.btn-primary {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 16px;
   cursor: pointer;
-  font-size: $small;
-  font-weight: 600;
-  color: $text-secondary;
-  background-color: $card-1;
+  height: 36px;
+  width: 184px;
   border-radius: 6px;
-  border: 1px solid $border-default;
-  padding: 0.2rem 0.6rem;
-  transition: 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  background-color: #a7a5a5;
+  box-shadow: 3px 3px #353232;
+  transition: 0.15s ease;
   &:hover {
-    background-color: $card-0;
-    color: $text-primary;
-    transition: 0.3s ease;
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0 0 #353232;
   }
-  &__numb {
-    background-color: $theme-dark-bg;
-    padding: 1px 3px;
-    border-radius: 6px;
-  }
-}
-
-.btn-green {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $green-5;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  font-size: $small;
-  font-weight: $semibold;
-  color: $white;
-  &:hover {
-    color: $white;
-    background-color: $green-4;
-    text-decoration: none;
-    transition: 0.3s ease;
+  &:active {
+    background-color: #b4b3b3;
   }
 }

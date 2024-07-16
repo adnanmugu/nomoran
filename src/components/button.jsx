@@ -1,12 +1,7 @@
 import React from 'react';
-import style from 'src/app/globals.css';
 
-const button = () => {
-  return (
-    <div className={style.main}>
-      <button>download</button>
-    </div>
-  );
+const Button = () => {
+  return <button className="btn-primary">download</button>;
 };
 
-export default button;
+export default Button;

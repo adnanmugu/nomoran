@@ -1,12 +1,15 @@
 import React from 'react';
+import Button from 'src/components/button';
 
-const Input = () => {
+const Form = () => {
   return (
-    <div className="wrapper">
-      <h1 className="wrapper__title">Untitled.</h1>
-      <div className="wrapper__main">
-        <div className="wrapper__content">
-          <div className="wrapper__input">
+    <div className="form">
+      <div className="form__title">
+        <input type="text" placeholder="Untitled." />
+      </div>
+      <div className="form form--container">
+        <div className="form form--wrapper">
+          <div className="form__input">
             <label for="row-length">row length</label>
             <input
               placeholder="number..."
@@ -15,7 +18,7 @@ const Input = () => {
               id="row-length"
             />
           </div>
-          <div className="wrapper__input">
+          <div className="form__input">
             <label for="column-length">column length</label>
             <input
               placeholder="number ..."
@@ -25,7 +28,7 @@ const Input = () => {
             />
           </div>
 
-          <div className="wrapper__input">
+          <div className="form__input">
             <label for="column-length">leading zero</label>
             <input
               placeholder="number ..."
@@ -36,8 +39,8 @@ const Input = () => {
           </div>
         </div>
 
-        <div className="wrapper__content">
-          <div className="wrapper__input">
+        <div className="form form--wrapper">
+          <div className="form__input">
             <label for="first-value">first value</label>
             <input
               placeholder="number..."
@@ -46,7 +49,7 @@ const Input = () => {
               id="first-value"
             />
           </div>
-          <div className="wrapper__input">
+          <div className="form__input">
             <label for="last-value">last value</label>
             <input
               placeholder="number..."
@@ -55,7 +58,7 @@ const Input = () => {
               id="first-value"
             />
           </div>
-          <div className="wrapper__input">
+          <div className="form__input">
             <label for="leading-zero">increment type</label>
             <select name="leading-zero" id="leading-zero">
               <option value="tens">number</option>
@@ -64,8 +67,9 @@ const Input = () => {
           </div>
         </div>
       </div>
+      <Button />
     </div>
   );
 };
 
-export default Input;
+export default Form;

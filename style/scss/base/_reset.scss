@@ -1,5 +1,4 @@
 // style reset
-
 * {
   padding: 0;
   margin: 0;
@@ -11,30 +10,14 @@ body {
   font-size: 16px;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  color: black;
-
+  background-color: #c5c3c3;
   max-width: 1132px;
-  // padding: 0 110px;
   margin: 0 auto;
-  // padding: 0 110px;
-  // width: 1132px;
-  @include media('<=440px') {
-    padding: 0 1rem;
-    margin: 0 auto;
-  }
-  @include media('>=764px', '<1210px') {
-    padding: 0 1rem;
-    margin: 0 auto;
-  }
 }
 
-a {
-  text-decoration: none;
-  color: black;
-  &:hover {
-    text-decoration: underline;
-    transition: 0.3s ease;
-  }
+main {
+  display: flex;
+  flex-direction: row;
 }
 
 button,
@@ -56,18 +39,3 @@ li {
   padding: 0;
   list-style: none;
 }
-
-// ::-webkit-scrollbar {
-//   width: 0.92rem;
-//   background-color: $gray-6;
-//   &-thumb {
-//     border: 1px solid $gray-6;
-//     background-color: $gray-5;
-//     border-radius: 2px;
-//     cursor: pointer;
-//     &:active {
-//       background-color: $gray-4;
-//       transition: 0.2s ease;
-//     }
-//   }
-// }
