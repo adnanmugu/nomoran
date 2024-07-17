@@ -4,30 +4,28 @@ import { Csv, Row, Folder, Zip, Column } from 'src/assets/index';
 
 export const Details = () => {
   return (
-    <div className="wrapper wrapper--input">
-      <h1 className="wrapper__title">Untitled.</h1>
-      <div className="wrapper__main">
-        <div className="wrapper__icons">
-          <div className="wrapper__icon">
-            <Folder />
-            <span class="icon__desc">untitled.zip</span>
-          </div>
-          <div className="wrapper__icon">
-            <Csv />
-            <span>8</span>
-          </div>
-          <div className="wrapper__icon">
-            <Row />
-            <span>10</span>
-          </div>
-          <div className="wrapper__icon">
-            <Column />
-            <span>1000</span>
-          </div>
-          <div className="wrapper__icon">
-            <Zip />
-            <span>1000 kb</span>
-          </div>
+    <div className="detail">
+      <span className="detail__title">Details.</span>
+      <div className="detail__container">
+        <div className="detail__icon">
+          <Folder />
+          <span>untitled.zip</span>
+        </div>
+        <div className="detail__icon">
+          <Csv />
+          <span>8</span>
+        </div>
+        <div className="detail__icon">
+          <Row />
+          <span>10</span>
+        </div>
+        <div className="detail__icon">
+          <Column />
+          <span>1000</span>
+        </div>
+        <div className="detail__icon">
+          <Zip />
+          <span>1000 kb</span>
         </div>
       </div>
       <Button />
