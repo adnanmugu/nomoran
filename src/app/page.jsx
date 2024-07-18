@@ -25,8 +25,16 @@ export default function Home() {
         </div>
       </div>
       <div className="container container--ads">
-        <div className="box--horizontal">this horizontal</div>
-        <div className="box--vertical">this vertical</div>
+        <div className="ads">
+          <div className="ads__164">
+            <h1>Auto Increment Generator.</h1>
+            <p>
+              Free tools for generate a list of a number that can use for NCR
+              bill
+            </p>
+          </div>
+          <div className="ads__280">this vertical</div>
+        </div>
       </div>
     </main>
   );

@@ -19,30 +19,32 @@
 
   &--ads {
     @extend .container;
-    padding: 0 1rem 0 1rem;
     gap: 1rem;
   }
 }
 
-.box {
-  &--horizontal {
+.ads {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  &__164 {
+    padding: 1rem;
     width: 300px;
     height: 164px;
     background-color: gray;
-    border-radius: 4px;
+    border-radius: 6px;
+    h1 {
+      line-height: 32px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 
-  &--vertical {
+  &__280 {
     width: 300px;
     height: 280px;
+    border-radius: 6px;
     background-color: gray;
-  }
-
-  &--input {
-    background-color: red;
-  }
-
-  &--title {
-    color: blue;
   }
 }

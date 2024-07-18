@@ -90,3 +90,42 @@
     align-items: center;
   }
 }
+
+.file {
+  @extend .form;
+  &__title {
+    @extend .detail__title;
+  }
+
+  &__container {
+    height: 188px;
+    padding-top: 0.5rem;
+  }
+
+  &__list {
+    @extend .form;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.4rem;
+  }
+
+  &__dot {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    &::before {
+      content: ' ';
+      height: 25px;
+      width: 2px;
+      background-color: gray;
+      z-index: -3;
+      position: absolute;
+    }
+  }
+}
