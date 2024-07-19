@@ -6,15 +6,14 @@
 @import 'base/auth';
 @import 'base/reset';
 
-@import 'components/dropdown';
 @import 'components/button';
-@import 'components/verlist';
 
-@import 'layouts/input';
 @import 'layouts/container';
 @import 'layouts/header';
+@import 'layouts/form';
+@import 'layouts/detail';
+@import 'layouts/file';
+@import 'layouts/about';
 @import 'layouts/footer';
-
-@import 'pages/single';
 
 @import 'helpers/utils';

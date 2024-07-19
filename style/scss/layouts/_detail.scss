@@ -1,0 +1,29 @@
+@import './form';
+@import '../helpers/variable';
+
+.detail {
+  @extend .form;
+  &__title {
+    @extend .form__title;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    // padding-top: 0.1rem;
+    height: 188px;
+    padding-top: 1rem;
+  }
+
+  &__icon {
+    color: $primary-color;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

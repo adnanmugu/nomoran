@@ -1,0 +1,16 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &__desc {
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      padding-top: 1rem;
+      width: 364px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

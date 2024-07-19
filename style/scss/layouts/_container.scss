@@ -2,16 +2,18 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  width: 100%;
   &--form {
-    @extend .container;
+    // @extend .container;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem 0 0;
   }
 
   &--about {
     @extend .container;
-    flex-direction: column;
-    width: 432px;
+    padding: 1rem 2.5rem 0 0;
     p {
       font-size: 14px;
     }
@@ -19,6 +21,7 @@
 
   &--ads {
     @extend .container;
+    width: 300px;
     gap: 1rem;
   }
 }

@@ -1,3 +1,5 @@
+@import '../helpers/variable';
+
 // style reset
 * {
   padding: 0;
@@ -10,7 +12,8 @@ body {
   font-size: 16px;
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  background-color: #c5c3c3;
+  background-color: $bgcolor;
+  color: $primary-color;
   max-width: 1132px;
   margin: 0 auto;
 }
@@ -39,4 +42,13 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $secondary-color;
+  transition: 0.2s ease;
+  &:hover {
+    color: $primary-color;
+  }
 }

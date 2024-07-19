@@ -6,14 +6,32 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  // &__container {
+  //   width: 300px;
+  // }
+
   &__wrapper {
     @extend .header;
-    padding-right: 7rem;
+    justify-content: flex-start;
     gap: 1rem;
     font-weight: 600;
   }
+
   &__link {
     @extend .header;
     gap: 0.5rem;
+  }
+
+  &__link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -1,6 +1,7 @@
 import Form from 'src/layouts/form';
 import Details from 'src/layouts/details';
 import Files from 'src/layouts/files';
+import About from 'src/layouts/about';
 import React from 'react';
 
 export default function Home() {
@@ -13,15 +14,7 @@ export default function Home() {
           <Files />
         </div>
         <div className="container container--about">
-          <h1>About</h1>
-          <p>
-            Nomoran is application simplifies the process of generating
-            sequential numbers by allowing users to input a starting number,
-            after which the app automatically increments the value to create a
-            series. This sequence is then conveniently saved into a CSV or RTF
-            file, making it ideal for tasks requiring ordered data generation
-            and easy file export.
-          </p>
+          <About />
         </div>
       </div>
       <div className="container container--ads">
