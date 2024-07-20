@@ -1,9 +1,18 @@
-import React from 'react';
-import Button from 'src/components/button';
+'use client'; // This is a client component
+import React, { useState } from 'react';
 
-const Form = () => {
+export default function Form() {
+  const [value, setValue] = useState('');
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    alert(`Input value: ${inputValue}`);
+  };
   return (
-    <div className="form">
+    <form className="form">
       <div className="form__title">
         <input type="text" placeholder="Untitled." />
       </div>
@@ -29,13 +38,17 @@ const Form = () => {
           </div>
 
           <div className="form__input">
-            <label for="column-length">leading zero</label>
-            <input
-              placeholder="number ..."
-              type="text"
-              name="column-length"
-              id="column-length"
-            />
+            <label for="leading-zero">leading zero</label>
+            <select name="leading-zero" id="leading-zero">
+              <option value="onoe">0X</option>
+              <option value="two">00X</option>
+              <option value="three">000X</option>
+              <option value="four">0000X</option>
+              <option value="five">00000X</option>
+              <option value="six">000000X</option>
+              <option value="seven">0000000X</option>
+              <option value="eight">00000000X</option>
+            </select>
           </div>
         </div>
 
@@ -49,27 +62,26 @@ const Form = () => {
               id="first-value"
             />
           </div>
-          <div className="form__input">
+          <div className="form__input form__input--mute">
             <label for="last-value">last value</label>
             <input
               placeholder="number..."
               type="text"
               name="last-value"
               id="first-value"
+              disabled
             />
           </div>
           <div className="form__input">
-            <label for="leading-zero">increment type</label>
-            <select name="leading-zero" id="leading-zero">
+            <label for="increment-type">increment type</label>
+            <select name="increment-type" id="increment-type">
               <option value="tens">number</option>
               <option value="hundreds">barcode</option>
             </select>
           </div>
         </div>
       </div>
-      <Button />
-    </div>
+      <button className="btn-primary">generate</button>
+    </form>
   );
-};
-
-export default Form;
+}

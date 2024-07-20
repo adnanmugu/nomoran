@@ -39,5 +39,12 @@
       z-index: -3;
       position: absolute;
     }
+
+    &--last {
+      &::before {
+        height: 0px;
+        width: 0px;
+      }
+    }
   }
 }

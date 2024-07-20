@@ -11,15 +11,15 @@ const files = () => {
         </div>
         <div class="file__list">
           <div class="file__dot"></div>
-          <p>#1 13001 - 14000</p>
+          <p>#2 13001 - 14000</p>
         </div>
         <div class="file__list">
           <div class="file__dot"></div>
-          <p>#1 14001 - 15000</p>
+          <p>#3 14001 - 15000</p>
         </div>
         <div class="file__list">
-          <div class="file__dot"></div>
-          <p>#1 15001 - 16000</p>
+          <div class="file__dot file__dot--last"></div>
+          <p>#4 15001 - 16000</p>
         </div>
       </div>
     </div>

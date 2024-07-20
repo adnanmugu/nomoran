@@ -36,7 +36,7 @@ adnanmugu@2024
 }
 
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   background-color: #c5c3c3;
@@ -214,8 +214,37 @@ a:hover {
   border-radius: 4px;
   border: 2px solid #353232;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
+}
+.form__input select {
+  height: 30px;
+  font-size: 14px;
+  width: 164px;
+  border-radius: 4px;
+  border: 2px solid #353232;
+  color: gray;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  padding: 0 6px 0 6px;
+  background-color: transparent;
+}
+.form__input select option {
+  background-color: #c5c3c3;
+  border: 2px solid #353232;
+  border-radius: 4px 4px 4px 4px;
+}
+.form__input select option:hover {
+  background-color: red;
+}
+.form__input select option:active {
+  background-color: blue;
+}
+.form__input--mute {
+  color: hsla(0, 3%, 20%, 0.4);
+}
+.form__input--mute input {
+  border: 2px solid hsla(0, 3%, 20%, 0.4);
 }
 .form__icons {
   display: flex;
@@ -271,8 +300,37 @@ a:hover {
   border-radius: 4px;
   border: 2px solid #353232;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
+}
+.form__input select {
+  height: 30px;
+  font-size: 14px;
+  width: 164px;
+  border-radius: 4px;
+  border: 2px solid #353232;
+  color: gray;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  padding: 0 6px 0 6px;
+  background-color: transparent;
+}
+.form__input select option {
+  background-color: #c5c3c3;
+  border: 2px solid #353232;
+  border-radius: 4px 4px 4px 4px;
+}
+.form__input select option:hover {
+  background-color: red;
+}
+.form__input select option:active {
+  background-color: blue;
+}
+.form__input--mute {
+  color: hsla(0, 3%, 20%, 0.4);
+}
+.form__input--mute input {
+  border: 2px solid hsla(0, 3%, 20%, 0.4);
 }
 .form__icons {
   display: flex;
@@ -348,8 +406,37 @@ a:hover {
   border-radius: 4px;
   border: 2px solid #353232;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
+}
+.form__input select {
+  height: 30px;
+  font-size: 14px;
+  width: 164px;
+  border-radius: 4px;
+  border: 2px solid #353232;
+  color: gray;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  padding: 0 6px 0 6px;
+  background-color: transparent;
+}
+.form__input select option {
+  background-color: #c5c3c3;
+  border: 2px solid #353232;
+  border-radius: 4px 4px 4px 4px;
+}
+.form__input select option:hover {
+  background-color: red;
+}
+.form__input select option:active {
+  background-color: blue;
+}
+.form__input--mute {
+  color: hsla(0, 3%, 20%, 0.4);
+}
+.form__input--mute input {
+  border: 2px solid hsla(0, 3%, 20%, 0.4);
 }
 .form__icons {
   display: flex;
@@ -394,6 +481,10 @@ a:hover {
   background-color: #353232;
   z-index: -3;
   position: absolute;
+}
+.file__dot--last::before {
+  height: 0px;
+  width: 0px;
 }
 
 .about {
