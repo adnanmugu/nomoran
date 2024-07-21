@@ -1,46 +1,78 @@
 'use client'; // This is a client component
 import React, { useState } from 'react';
+import { getNumber } from '../_app.js';
 
 export default function Form() {
-  const [value, setValue] = useState('');
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const [inputs, setInputs] = useState({
+    rowLength: '',
+    columnLength: '',
+    leadingZero: '',
+    firstValue: '',
+    incrementType: '',
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
   };
 
+  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Input value: ${inputValue}`);
+    // Process the form data as needed
+    console.log(inputs);
+    const getData = getNumber(
+      inputs.rowLength,
+      inputs.columnLength,
+      inputs.firstValue,
+      inputs.leadingZero
+    );
+
+    console.log(getData);
   };
+
   return (
-    <form className="form">
+    <form className="form" onSubmit={handleSubmit}>
       <div className="form__title">
         <input type="text" placeholder="Untitled." />
       </div>
       <div className="form form--container">
         <div className="form form--wrapper">
           <div className="form__input">
-            <label for="row-length">row length</label>
+            <label for="rowLength">row length</label>
             <input
               placeholder="number..."
               type="text"
-              name="row-length"
-              id="row-length"
+              name="rowLength"
+              id="rowLength"
+              onChange={handleChange}
+              value={inputs.rowLength}
             />
           </div>
           <div className="form__input">
-            <label for="column-length">column length</label>
+            <label for="columnLength">column length</label>
             <input
-              placeholder="number ..."
               type="text"
-              name="column-length"
-              id="column-length"
+              onChange={handleChange}
+              value={inputs.columnLength}
+              placeholder="number ..."
+              name="columnLength"
+              id="columnLength"
             />
           </div>
 
           <div className="form__input">
-            <label for="leading-zero">leading zero</label>
-            <select name="leading-zero" id="leading-zero">
-              <option value="onoe">0X</option>
+            <label for="leadingZero">leading zero</label>
+            <select
+              name="leadingZero"
+              id="leadingZero"
+              onChange={handleChange}
+              value={inputs.leadingZero}
+            >
+              <option value="one">0X</option>
               <option value="two">00X</option>
               <option value="three">000X</option>
               <option value="four">0000X</option>
@@ -54,12 +86,14 @@ export default function Form() {
 
         <div className="form form--wrapper">
           <div className="form__input">
-            <label for="first-value">first value</label>
+            <label for="firstValue">first value</label>
             <input
               placeholder="number..."
               type="text"
-              name="first-value"
-              id="first-value"
+              name="firstValue"
+              id="firstValue"
+              onChange={handleChange}
+              value={inputs.firstValue}
             />
           </div>
           <div className="form__input form__input--mute">
@@ -73,15 +107,22 @@ export default function Form() {
             />
           </div>
           <div className="form__input">
-            <label for="increment-type">increment type</label>
-            <select name="increment-type" id="increment-type">
-              <option value="tens">number</option>
-              <option value="hundreds">barcode</option>
+            <label for="incrementType">increment type</label>
+            <select
+              name="incrementType"
+              id="increment-type"
+              onChange={handleChange}
+              value={inputs.incrementType}
+            >
+              <option value="number">number</option>
+              <option value="barcode">barcode</option>
             </select>
           </div>
         </div>
       </div>
-      <button className="btn-primary">generate</button>
+      <button className="btn-primary" type="submit">
+        generate
+      </button>
     </form>
   );
 }

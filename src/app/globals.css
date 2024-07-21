@@ -161,6 +161,9 @@ a:hover {
   align-items: center;
   gap: 0.6rem;
 }
+.header__container {
+  width: 300px;
+}
 .header__wrapper {
   justify-content: flex-start;
   gap: 1rem;
@@ -223,7 +226,7 @@ a:hover {
   width: 164px;
   border-radius: 4px;
   border: 2px solid #353232;
-  color: gray;
+  color: #353232;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   padding: 0 6px 0 6px;
@@ -233,12 +236,9 @@ a:hover {
   background-color: #c5c3c3;
   border: 2px solid #353232;
   border-radius: 4px 4px 4px 4px;
-}
-.form__input select option:hover {
-  background-color: red;
-}
-.form__input select option:active {
-  background-color: blue;
+  color: #353232;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
 }
 .form__input--mute {
   color: hsla(0, 3%, 20%, 0.4);
@@ -309,7 +309,7 @@ a:hover {
   width: 164px;
   border-radius: 4px;
   border: 2px solid #353232;
-  color: gray;
+  color: #353232;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   padding: 0 6px 0 6px;
@@ -319,12 +319,9 @@ a:hover {
   background-color: #c5c3c3;
   border: 2px solid #353232;
   border-radius: 4px 4px 4px 4px;
-}
-.form__input select option:hover {
-  background-color: red;
-}
-.form__input select option:active {
-  background-color: blue;
+  color: #353232;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
 }
 .form__input--mute {
   color: hsla(0, 3%, 20%, 0.4);
@@ -415,7 +412,7 @@ a:hover {
   width: 164px;
   border-radius: 4px;
   border: 2px solid #353232;
-  color: gray;
+  color: #353232;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   padding: 0 6px 0 6px;
@@ -425,12 +422,9 @@ a:hover {
   background-color: #c5c3c3;
   border: 2px solid #353232;
   border-radius: 4px 4px 4px 4px;
-}
-.form__input select option:hover {
-  background-color: red;
-}
-.form__input select option:active {
-  background-color: blue;
+  color: #353232;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
 }
 .form__input--mute {
   color: hsla(0, 3%, 20%, 0.4);

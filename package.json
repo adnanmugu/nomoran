@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "number incerment generator web app",
   "main": "src/page.js",
+  "type": "module",
   "scripts": {
     "scss": "sass --watch style/scss/main.scss:src/app/globals.css",
     "dev": "next dev",

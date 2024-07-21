@@ -13,9 +13,9 @@
     gap: 0.6rem;
   }
 
-  // &__container {
-  //   width: 300px;
-  // }
+  &__container {
+    width: 300px;
+  }
 
   &__wrapper {
     @extend .header;
