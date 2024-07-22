@@ -91,7 +91,7 @@ function numbering(rowLength, columnLength, firstValue, paddNum) {
 }
 
 const result = numbering(2, 100, 1, getPaddNumber('three'));
-console.log(result);
+// console.log(result);
 
 function getNumber(rowLength, columnLength, firstValue, paddNumber) {
   const paddnum = getPaddNumber(paddNumber);
