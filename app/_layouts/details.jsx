@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'src/components/button';
-import { Csv, Row, Folder, Zip, Column } from 'src/assets/index';
+import Button from 'app/_components/button';
+import { Csv, Row, Folder, Zip, Column } from 'app/_assets/index';
 
 export const Details = () => {
   return (

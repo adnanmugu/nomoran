@@ -1,6 +1,6 @@
 'use client'; // This is a client component
 import React, { useState } from 'react';
-import { getNumber } from '../_app.js';
+import { getNumber } from 'app/_lib/_app.js';
 
 export default function Form() {
   const [inputs, setInputs] = useState({

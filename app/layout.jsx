@@ -1,6 +1,6 @@
 // const inter = Inter({ subsets: ['latin'] });
-import 'src/app/globals.css';
-import Header from 'src/layouts/header';
+import 'app/globals.css';
+import Header from 'app/_layouts/header';
 
 export const metadata = {
   title: 'Nomoran',

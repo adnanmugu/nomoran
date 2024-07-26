@@ -1,7 +1,7 @@
-import Form from 'src/layouts/form';
-import Details from 'src/layouts/details';
-import Files from 'src/layouts/files';
-import About from 'src/layouts/about';
+import Form from 'app/_layouts/form';
+import Details from 'app/_layouts/details';
+import Files from 'app/_layouts/files';
+import About from 'app/_layouts/about';
 import React from 'react';
 
 export default function Home() {
