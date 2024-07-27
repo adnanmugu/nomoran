@@ -5,7 +5,7 @@
   "main": "src/page.js",
   "type": "module",
   "scripts": {
-    "scss": "sass --watch style/scss/main.scss:app/globals.css --no-source-map",
+    "scss": "sass --watch --style=compressed style/scss/main.scss:app/globals.css --no-source-map",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
