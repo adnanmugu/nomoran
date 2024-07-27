@@ -1,7 +1,8 @@
 /**
+ * Converts a string representation of a number to its numeric value
  * get value from string
- * @param {string} value input string value
- * @returns number
+ * @param {String} value input string value representing a number
+ * @returns {number|null} numeric value corresponding to the input string, or null if the input is not recognized.
  */
 function getPaddNumber(value) {
   switch (value) {
@@ -52,11 +53,14 @@ function printNum(firstPosition, endPosition, paddNum) {
 }
 
 /**
- *
- * @param {number} rowLength
- * @param {number} columLength
- * @param {number} firstValue
- * @param {number} paddnum
+ * Generates a sequence of numbers based on the provided row
+ * and column lengths, starting value, and padding number
+ * @param {Number} rowLength number of rows to generates
+ * @param {Number} columLength number of column to generate
+ * @param {Number} firstValue starting value for sequence
+ * @param {Number} paddnum padding nubmber to be used
+ * @returns {Array} a 2d array containing the generated
+ * sequences of numbers
  */
 function numbering(rowLength, columnLength, firstValue, paddNum) {
   const result = [];

@@ -4,6 +4,14 @@ import { getNumber } from './_app.js';
 
 const data = getNumber(12, 50, 1, 'three');
 
+/**
+ * Processing an array that get from input user then that
+ * array is gonna be converted into .csv file and if file
+ * is more than one file the result is gonna be a .zip file
+ * @param {number} isOneFile indicates if data's one file or more
+ * @param {array} data the array data to be process
+ * @param {string} filename the name of file to save data
+ */
 function generateCsv(isOneFile, data, filename) {
   // Transform the array into columns for CSV
   // Determine the maximum length of the sub-arrays
