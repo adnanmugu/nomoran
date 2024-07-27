@@ -34,6 +34,16 @@ export default function Form() {
     console.log(getData);
   };
 
+  const [count, setCount] = useState(1);
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount((prevCount) => Math.max(1, prevCount - 1));
+  };
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__title">
@@ -120,9 +130,23 @@ export default function Form() {
           </div>
         </div>
       </div>
-      <button className="btn-primary" type="submit">
-        generate
-      </button>
+      <div className="form__button">
+        <button className="btn-primary" type="submit">
+          generate
+        </button>
+        <div className="form__button--increment">
+          <button
+            className="btn-click btn-click--minus"
+            onClick={handleDecrement}
+          >
+            -
+          </button>
+          <span>{count}</span>
+          <button className="btn-click" onClick={handleIncrement}>
+            +
+          </button>
+        </div>
+      </div>
     </form>
   );
 }
