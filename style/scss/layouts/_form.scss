@@ -92,4 +92,14 @@
     align-items: center;
     gap: 1rem;
   }
+  &__button {
+    @extend .form;
+    flex-direction: row;
+    justify-content: space-between;
+    &--increment {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
 }

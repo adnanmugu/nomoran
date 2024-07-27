@@ -18,3 +18,30 @@
     background-color: #b4b3b3;
   }
 }
+
+.btn-click {
+  cursor: pointer;
+  height: 31px;
+  width: 31px;
+  border-radius: 6px;
+  background-color: $bgcolor;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.07s ease;
+  &--minus {
+    padding-bottom: 0.2rem;
+  }
+  &:hover {
+    background-color: $primary-color;
+    color: $bgcolor;
+  }
+  &:active {
+    background-color: $bgcolor;
+  }
+}
