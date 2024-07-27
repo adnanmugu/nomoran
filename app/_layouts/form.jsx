@@ -42,7 +42,7 @@ export default function Form() {
       <div className="form form--container">
         <div className="form form--wrapper">
           <div className="form__input">
-            <label for="rowLength">row length</label>
+            <label htmlFor="rowLength">row length</label>
             <input
               placeholder="number..."
               type="text"
@@ -53,7 +53,7 @@ export default function Form() {
             />
           </div>
           <div className="form__input">
-            <label for="columnLength">column length</label>
+            <label htmlFor="columnLength">column length</label>
             <input
               type="text"
               onChange={handleChange}
@@ -65,7 +65,7 @@ export default function Form() {
           </div>
 
           <div className="form__input">
-            <label for="leadingZero">leading zero</label>
+            <label htmlFor="leadingZero">leading zero</label>
             <select
               name="leadingZero"
               id="leadingZero"
@@ -86,7 +86,7 @@ export default function Form() {
 
         <div className="form form--wrapper">
           <div className="form__input">
-            <label for="firstValue">first value</label>
+            <label htmlFor="firstValue">first value</label>
             <input
               placeholder="number..."
               type="text"
@@ -97,7 +97,7 @@ export default function Form() {
             />
           </div>
           <div className="form__input form__input--mute">
-            <label for="last-value">last value</label>
+            <label htmlFor="last-value">last value</label>
             <input
               placeholder="number..."
               type="text"
@@ -107,7 +107,7 @@ export default function Form() {
             />
           </div>
           <div className="form__input">
-            <label for="incrementType">increment type</label>
+            <label htmlFor="incrementType">increment type</label>
             <select
               name="incrementType"
               id="increment-type"
