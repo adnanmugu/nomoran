@@ -92,14 +92,28 @@
     align-items: center;
     gap: 1rem;
   }
+
   &__button {
     @extend .form;
     flex-direction: row;
     justify-content: space-between;
-    &--increment {
+
+    &--wrapper {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.3rem;
+      color: $primary-color;
+    }
+
+    input {
+      width: 32px;
+      text-align: center;
+      text-justify: auto;
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 14px;
+      background-color: transparent;
+      color: $primary-color;
     }
   }
 }
