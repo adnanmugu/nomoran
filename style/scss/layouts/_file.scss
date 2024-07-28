@@ -14,7 +14,8 @@
 
   &__list {
     @extend .form;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 0.5rem;
     align-items: center;
     flex-direction: row;
     gap: 0.4rem;
