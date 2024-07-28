@@ -1,26 +1,27 @@
 import React from 'react';
 
 const files = () => {
+  const firstLast = ['101 - 200', '201 - 300'];
   return (
     <div className="file">
       <span className="file__title">Files.</span>
       <div className="file__container">
-        <div className="file__list">
-          <div className="file__dot"></div>
-          <p>#1 12001 - 13000</p>
-        </div>
-        <div className="file__list">
-          <div className="file__dot"></div>
-          <p>#2 13001 - 14000</p>
-        </div>
-        <div className="file__list">
-          <div className="file__dot"></div>
-          <p>#3 14001 - 15000</p>
-        </div>
-        <div className="file__list">
-          <div className="file__dot file__dot--last"></div>
-          <p>#4 15001 - 16000</p>
-        </div>
+        {firstLast.map((number, index) => {
+          return (
+            <div key={index} className="file__list">
+              <div
+                className={
+                  index === firstLast.length - 1
+                    ? 'file__dot file__dot--last'
+                    : 'file__dot'
+                }
+              ></div>
+              <p>{number}</p>
+            </div>
+          );
+        })}
+        {/* <FileList className="file__dot" content="#1 101 - 200" />
+        <FileList className="file__dot" content="#1 101 - 200" /> */}
       </div>
     </div>
   );
