@@ -1,33 +1,4 @@
 /**
- * Converts a string representation of a number to its numeric value
- * get value from string
- * @param {String} value input string value representing a number
- * @returns {number|null} numeric value corresponding to the input string, or null if the input is not recognized.
- */
-function getPaddNumber(value) {
-  switch (value) {
-    case 'one':
-      return 1;
-    case 'two':
-      return 2;
-    case 'three':
-      return 3;
-    case 'four':
-      return 4;
-    case 'five':
-      return 5;
-    case 'six':
-      return 6;
-    case 'seven':
-      return 7;
-    case 'eight':
-      return 8;
-    default:
-      return null; // or any default value or error handling
-  }
-}
-
-/**
  * Find a difference value
  * @param {number} numone is a first value
  * @param {number} numtwo columnLength
@@ -94,12 +65,11 @@ function numbering(rowLength, columnLength, firstValue, paddNum) {
   return result;
 }
 
-const result = numbering(2, 100, 1, getPaddNumber('three'));
+// const result = numbering(2, 100, 1, 3);
 // console.log(result);
 
 function getNumber(rowLength, columnLength, firstValue, paddNumber) {
-  const paddnum = getPaddNumber(paddNumber);
-  const result = numbering(rowLength, columnLength, firstValue, paddnum);
+  const result = numbering(rowLength, columnLength, firstValue, paddNumber);
   return result;
 }
 export { getNumber };

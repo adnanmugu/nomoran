@@ -28,7 +28,7 @@ export default function Form() {
       inputs.rowLength,
       inputs.columnLength,
       inputs.firstValue,
-      inputs.leadingZero
+      Number(inputs.leadingZero)
     );
 
     console.log(getData);
@@ -82,14 +82,14 @@ export default function Form() {
               onChange={handleChange}
               value={inputs.leadingZero}
             >
-              <option value="one">0X</option>
-              <option value="two">00X</option>
-              <option value="three">000X</option>
-              <option value="four">0000X</option>
-              <option value="five">00000X</option>
-              <option value="six">000000X</option>
-              <option value="seven">0000000X</option>
-              <option value="eight">00000000X</option>
+              <option value="1">0X</option>
+              <option value="2">00X</option>
+              <option value="3">000X</option>
+              <option value="4">0000X</option>
+              <option value="5">00000X</option>
+              <option value="6">000000X</option>
+              <option value="7">0000000X</option>
+              <option value="8">00000000X</option>
             </select>
           </div>
         </div>
