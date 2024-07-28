@@ -3,13 +3,23 @@ import React, { useState } from 'react';
 import { getNumber } from 'app/_lib/_app.js';
 
 export default function Form() {
+  const [count, setCount] = useState(1);
   const [inputs, setInputs] = useState({
+    fileName: '',
     rowLength: '',
     columnLength: '',
-    leadingZero: '',
+    leadingZero: '1',
     firstValue: '',
-    incrementType: '',
+    incrementType: 'number',
   });
+
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
+
+  const handleDecrement = () => {
+    setCount((prevCount) => Math.max(1, prevCount - 1));
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -23,31 +33,29 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Process the form data as needed
-    console.log(inputs);
-    const getData = getNumber(
-      inputs.rowLength,
-      inputs.columnLength,
-      inputs.firstValue,
-      Number(inputs.leadingZero)
-    );
+    const datas = {
+      fileName: inputs.fileName,
+      rowLength: inputs.rowLength,
+      columnLength: inputs.columnLength,
+      leadingZero: inputs.leadingZero,
+      firstValue: inputs.firstValue,
+      incrementType: inputs.incrementType,
+      fileCount: count,
+    };
 
-    console.log(getData);
-  };
-
-  const [count, setCount] = useState(1);
-
-  const handleIncrement = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-
-  const handleDecrement = () => {
-    setCount((prevCount) => Math.max(1, prevCount - 1));
+    console.log(datas);
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__title">
-        <input type="text" placeholder="Untitled." />
+        <input
+          type="text"
+          name="fileName"
+          placeholder="Untitled."
+          value={inputs.fileName}
+          onChange={handleChange}
+        />
       </div>
       <div className="form form--container">
         <div className="form form--wrapper">
@@ -120,7 +128,7 @@ export default function Form() {
             <label htmlFor="incrementType">increment type</label>
             <select
               name="incrementType"
-              id="increment-type"
+              id="incrementType"
               onChange={handleChange}
               value={inputs.incrementType}
             >
@@ -134,14 +142,14 @@ export default function Form() {
         <button className="btn-primary" type="submit">
           generate
         </button>
-        <div className="form__button--increment">
+        <div className="form__button--wrapper">
           <button
             className="btn-click btn-click--minus"
             onClick={handleDecrement}
           >
             -
           </button>
-          <span>{count}</span>
+          <input type="text" name="fileCount" defaultValue={count} />
           <button className="btn-click" onClick={handleIncrement}>
             +
           </button>

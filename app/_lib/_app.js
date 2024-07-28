@@ -33,7 +33,7 @@ function printNum(firstPosition, endPosition, paddNum) {
  * @returns {Array} a 2d array containing the generated
  * sequences of numbers
  */
-function numbering(rowLength, columnLength, firstValue, paddNum) {
+function getNumber(rowLength, columnLength, firstValue, paddNum) {
   const result = [];
   const firstPosition = [];
   const endPosition = [];
@@ -68,8 +68,4 @@ function numbering(rowLength, columnLength, firstValue, paddNum) {
 // const result = numbering(2, 100, 1, 3);
 // console.log(result);
 
-function getNumber(rowLength, columnLength, firstValue, paddNumber) {
-  const result = numbering(rowLength, columnLength, firstValue, paddNumber);
-  return result;
-}
 export { getNumber };
