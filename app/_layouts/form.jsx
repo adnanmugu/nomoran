@@ -1,6 +1,6 @@
 'use client'; // This is a client component
 import React, { useState } from 'react';
-import { getNumber } from 'app/_lib/_app.js';
+import generate from 'app/_lib/app';
 
 export default function Form() {
   const [count, setCount] = useState(1);
@@ -42,8 +42,6 @@ export default function Form() {
       incrementType: inputs.incrementType,
       fileCount: count,
     };
-
-    console.log(datas);
   };
 
   return (
