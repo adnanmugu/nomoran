@@ -1,11 +1,21 @@
 class Files {
-  constructor(rowLength, columnLength, totalFile, paddNum) {
-    this.rowLength = rowLength;
-    this.columnLength = columnLength;
+  /**
+   * Creates an instance of the Files class
+   * @param {string} name name for configuration file
+   * @param {number} rows value of rows for generate
+   * @param {number} columns value of column for generate
+   * @param {number} totalFile total file iteration
+   * @param {number} paddNum digit to pad the sequence
+   */
+  constructor(name, type, rows, columns, totalFile, paddNum, firstValue) {
+    this.name = name;
+    this.type = type;
+    this.rows = rows;
+    this.columns = columns;
     this.paddNum = paddNum;
     this.totalFile = totalFile;
-    this.fileSize = '';
-    this.sequence = [];
+    this.totalSize = '';
+    this.sequence = this.getSequence(firstValue);
   }
 
   /**
@@ -16,30 +26,35 @@ class Files {
    * sequence number
    */
   getSequence(firstValue) {
+    const result = [];
     const firstValues = [];
     const lastValues = [];
 
-    if (this.rowLength === 1) {
-      return this.sequence.push(
-        this.#printNum(this.rowLength, this.columnLength)
-      );
+    if (this.type !== 'number') {
+      return `Feature is not yet available`;
+    }
+
+    if (this.rows === 1) {
+      return result.push(this.#printNum(this.rows, this.columns));
     }
 
     let first = firstValue;
-    let last = this.columnLength;
+    let last = this.columns;
 
     // find a firstValue and lastVAlue
-    for (let i = 1; i <= this.rowLength; i++) {
+    for (let i = 1; i <= this.rows; i++) {
       firstValues.push(first);
       lastValues.push(last);
 
-      first += this.columnLength;
-      last += this.columnLength;
+      first += this.columns;
+      last += this.columns;
     }
 
     firstValues.forEach((value, i) => {
-      this.sequence.push(this.#printNum(value, lastValues[i], this.paddNum));
+      result.push(this.#printNum(value, lastValues[i], this.paddNum));
     });
+
+    return result;
   }
 
   /**
@@ -131,8 +146,3 @@ class Files {
     }
   }
 }
-
-const userInput = new Files(2, 5, 3, 2);
-userInput.getSequence(1);
-
-console.log(userInput.sequence);
