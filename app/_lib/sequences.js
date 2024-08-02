@@ -2,11 +2,16 @@ import Files from './files.js';
 
 export default class Sequences extends Files {
   /**
+   * Initializes a new instance of the class with specified properties.
    *
-   * @param {number} rows
-   * @param {number} cols
-   * @param {number} baseNum
-   * @param {number} paddNum
+   * @param {string} name - name of the instance.
+   * @param {string} type - type of the instance.
+   * @param {number} fileCount - number of files to be processed.
+   * @param {number} rows - number of rows to be handled
+   * @param {number} cols - number of columns to be handled
+   * @param {number} baseNum - starting num for sequences
+   * @param {number} paddNum - number of digits for padding numbers (0 means
+   * no padding).
    */
   constructor(name, type, fileCount, rows, cols, baseNum, paddNum) {
     super(name, type, fileCount);
@@ -16,44 +21,54 @@ export default class Sequences extends Files {
     this.baseNum = baseNum;
   }
 
-  printNum(firstValue, lastValue, paddNum) {
+  /**
+   * generates a sequenct that has been process
+   * @param {string[]}  - An array of formatted string representations
+   */
+  getSequence(data) {}
+
+  /**
+   * Generates a sequence of numbers between `startValue` and `endValue`,
+   * formatted as strings.
+   *
+   * If `paddNum` is greater than 0, each number is padded with leading
+   * zeros to match the specified width. Otherwise, the numbers are
+   * converted to strings without padding.
+   *
+   * @param {number} startValue - starting number of the sequence.
+   * @param {number} endValue - ending number of the sequence.
+   * @returns {string[]} - An array of formatted string representations
+   * of the numbers in the sequence.
+   */
+  printNum(startValue, endValue) {
     const sequence = [];
 
-    for (firstValue; firstValue <= lastValue; firstValue++) {
-      sequence.push(firstValue.toString().padStart(paddNum, '0'));
+    for (let curr = startValue; curr <= endValue; curr++) {
+      const formattedNumber =
+        this.paddNum > 0
+          ? curr.toString().padStart(this.paddNum, '0')
+          : curr.toString();
+
+      sequence.push(formattedNumber);
     }
+
     return sequence;
   }
 
   /**
+   * Generates an array of first and last values for each file,
+   * based on the number of rows and columns.
    *
-   * @param {boolean} isFile
-   * @returns
+   * If `fileCount` is 1, the function returns a 2D array of first
+   * and last values for the specified rows.
+   * If `fileCount` is greater than 1, the function returns a 3D
+   * array where each sub-array corresponds
+   * to a file and contains the first and last values for the
+   * rows in that file.
+   *
+   * @returns {Array} - A 2D or 3D array containing the first and
+   * last values for each row and file.
    */
-  getFirstValues() {
-    const result = [];
-    const firstVal = [];
-    const lastVal = [];
-    const segmentValue = this.rows * this.cols;
-
-    let currFirst = this.baseNum;
-    // let currLast = this.fileCount == 1 ? this.cols : segmentValue;
-    // let iterations = this.fileCount == 1 ? this.rows : this.fileCount;
-    let currLast = this.cols;
-    let iterations = this.rows;
-
-    for (let i = 1; i <= iterations; i++) {
-      firstVal.push(currFirst);
-      lastVal.push(currLast);
-      // lastValues.push([currLast]);
-
-      currFirst += currLast;
-      currLast += currLast;
-    }
-
-    return [firstVal, lastVal];
-  }
-
   getrowsValue() {
     const result = [];
     let currFirst = this.baseNum;
