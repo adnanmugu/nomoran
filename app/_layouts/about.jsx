@@ -1,3 +1,5 @@
+import Button from 'app/_components/button';
+
 import React from 'react';
 
 const About = () => {
@@ -13,6 +15,7 @@ const About = () => {
           ideal for tasks requiring ordered data generation and easy file
           export.
         </p>
+        <Button />
       </div>
       <div className="about__image">this image</div>
     </div>
