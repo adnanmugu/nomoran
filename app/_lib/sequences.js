@@ -22,37 +22,33 @@ export default class Sequences extends Files {
   }
 
   /**
-   * generates a sequenct that has been process
-   * @param {string[]}  - An array of formatted string representations
-   */
-  getSequence(data) {}
-
-  /**
-   * Generates a sequence of numbers between `startValue` and `endValue`,
-   * formatted as strings.
+   * Generates sequences of incrementing numbers based on input data.
    *
-   * If `paddNum` is greater than 0, each number is padded with leading
-   * zeros to match the specified width. Otherwise, the numbers are
-   * converted to strings without padding.
-   *
-   * @param {number} startValue - starting number of the sequence.
-   * @param {number} endValue - ending number of the sequence.
-   * @returns {string[]} - An array of formatted string representations
-   * of the numbers in the sequence.
+   * @param {Array} data - An array of groups, where each group is an array
+   * of tuples. Each tuple contains two numbers [startValue, endValue].
+   * The function will generate a sequence from startValue to endValue
+   * for each tuple.
+   * @returns {Array} - A nested array structure where each group contains
+   * sequences of formatted numbers. The numbers are padded with leading
+   * zeros if paddNum is greater than 0.
    */
-  printNum(startValue, endValue) {
-    const sequence = [];
+  getSequence(data) {
+    return data.map((group) => {
+      // Map over each tuple in the group
+      return group.map(([startValue, endValue]) => {
+        const sequence = [];
 
-    for (let curr = startValue; curr <= endValue; curr++) {
-      const formattedNumber =
-        this.paddNum > 0
-          ? curr.toString().padStart(this.paddNum, '0')
-          : curr.toString();
-
-      sequence.push(formattedNumber);
-    }
-
-    return sequence;
+        for (let curr = startValue; curr <= endValue; curr += 1) {
+          const formattedNumber =
+            this.paddNum > 0
+              ? curr.toString().padStart(this.paddNum, '0')
+              : curr.toString();
+          sequence.push(formattedNumber);
+        }
+        // Add the formatted number to the sequence array
+        return sequence;
+      });
+    });
   }
 
   /**
@@ -76,21 +72,20 @@ export default class Sequences extends Files {
 
     for (let file = 1; file <= this.fileCount; file++) {
       const firstVal = [];
-      const lastVal = [];
+      // const lastVal = [];
 
       for (let i = 0; i < this.rows; i++) {
-        firstVal.push(currFirst);
-        lastVal.push(currLast);
+        firstVal.push([currFirst, currLast]);
+        // lastVal.push(currLast);
 
         currFirst += this.cols;
         currLast += this.cols;
       }
 
       if (this.fileCount === 1) {
-        return [firstVal, lastVal];
+        return [firstVal];
       }
-
-      result.push([firstVal, lastVal]);
+      result.push(firstVal);
     }
 
     return result;
