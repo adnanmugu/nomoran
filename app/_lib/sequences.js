@@ -72,7 +72,7 @@ export default class Sequences extends Files {
   getrowsValue() {
     const result = [];
     let currFirst = this.baseNum;
-    let currLast = this.cols;
+    let currLast = this.baseNum + this.cols - 1;
 
     for (let file = 1; file <= this.fileCount; file++) {
       const firstVal = [];
