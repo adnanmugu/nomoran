@@ -1,4 +1,4 @@
-import Sequences from '../app/_lib/sequences.js';
+import Sequences from '../../app/_lib/sequences.js';
 
 describe('Sequences Class', () => {
   let sequences;
