@@ -1,3 +1,4 @@
+import React from 'react';
 // const inter = Inter({ subsets: ['latin'] });
 import 'app/globals.css';
 import Header from 'app/_layouts/header';
