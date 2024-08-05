@@ -28,7 +28,7 @@ export const Details = () => {
           <span>1000 kb</span>
         </div>
       </div>
-      <Button />
+      <Button description="download" />
     </div>
   );
 };
