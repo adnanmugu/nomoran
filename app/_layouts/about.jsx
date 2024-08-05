@@ -15,9 +15,11 @@ const About = () => {
           ideal for tasks requiring ordered data generation and easy file
           export.
         </p>
-        <Button />
+        <div className="about__btn-wrapper">
+          <Button description="download cdr script" />
+        </div>
       </div>
-      <div className="about__image">this image</div>
+      <div className="about__image">images</div>
     </div>
   );
 };

@@ -8,9 +8,23 @@
     }
     p {
       padding-top: 1rem;
-      width: 364px;
+      width: 464px;
       font-size: 12px;
       line-height: 18px;
+    }
+  }
+
+  &__btn-wrapper {
+    padding-top: 1.8rem;
+    background-color: yelllow;
+  }
+
+  &__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--logo {
     }
   }
 }
