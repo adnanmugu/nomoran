@@ -1,0 +1,29 @@
+.ads {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  &__164 {
+    padding: 1rem;
+    width: 300px;
+    height: 164px;
+    background-color: gray;
+    border-radius: 6px;
+    h1 {
+      line-height: 32px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+
+  &__280 {
+    width: 300px;
+    height: 280px;
+    border-radius: 6px;
+    // background-color: linear-gradient(120deg, #64d4e7, #725bdc);
+    background: linear-gradient(360deg, $bgcolor, gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
