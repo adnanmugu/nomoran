@@ -90,4 +90,34 @@ export default class Sequences extends Files {
 
     return result;
   }
+
+  /**
+   * Recursively traverses a nested array structure to retrieve
+   * the last value.
+   *
+   * The function checks each level of the array, diving into the last
+   * element until it reaches the deepest nested array. It then returns
+   * the last value from that array.
+   *
+   * This function is particularly useful for consistently structured
+   * nested arrays where the deepest array contains the target values.
+   *
+   * @param {Array} array - Nested array structure from which
+   * to retrieve the last value.
+   * @returns {string} - Last value from the deepest nested array.
+   */
+  getLastValue(array) {
+    while (Array.isArray(array[array.length - 1])) {
+      array = array[array.length - 1];
+    }
+
+    return array[array.length - 1];
+  }
 }
+
+const testo = new Sequences('usep', 'number', 3, 2, 10, 1, 4);
+const rowstes = testo.getrowsValue();
+const rowseq = testo.getSequence(rowstes);
+
+// console.log(testo.getSequence(rowstes));
+console.log(testo.getLastValue(rowseq));
