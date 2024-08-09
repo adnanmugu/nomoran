@@ -1,14 +1,14 @@
 'use client'; // This is a client component
 import React, { useState } from 'react';
-import generate from 'app/_lib/app';
+import initilizeFile from 'app/_lib/app';
 
 export default function Form() {
   const [count, setCount] = useState(1);
   const [inputs, setInputs] = useState({
     fileName: '',
-    rowLength: '',
-    columnLength: '',
-    leadingZero: '1',
+    rows: '',
+    cols: '',
+    paddNum: '1',
     firstValue: '',
     incrementType: 'number',
   });
@@ -33,16 +33,30 @@ export default function Form() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Process the form data as needed
-    const datas = {
-      fileName: inputs.fileName,
-      rowLength: inputs.rowLength,
-      columnLength: inputs.columnLength,
-      leadingZero: inputs.leadingZero,
-      firstValue: inputs.firstValue,
-      incrementType: inputs.incrementType,
-      fileCount: count,
-    };
+
+    // const datas = {
+    //   fileName: inputs.fileName,
+    //   rowLength: inputs.rowLength,
+    //   columnLength: inputs.columnLength,
+    //   leadingZero: inputs.leadingZero,
+    //   firstValue: inputs.firstValue,
+    //   incrementType: inputs.incrementType,
+    //   fileCount: count,
+    // };
+    // initilizeFile(datas);
   };
+
+  const datas = {
+    fileName: 'lembang',
+    type: 'number',
+    rows: 2,
+    cols: 10,
+    paddNum: 3,
+    firstValue: 1,
+    fileCount: 2,
+  };
+  const result = initilizeFile(datas);
+  console.log(result);
 
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -58,35 +72,35 @@ export default function Form() {
       <div className="form form--container">
         <div className="form form--wrapper">
           <div className="form__input">
-            <label htmlFor="rowLength">row length</label>
+            <label htmlFor="rows">row length</label>
             <input
               placeholder="number..."
               type="text"
-              name="rowLength"
-              id="rowLength"
+              name="rows"
+              id="rows"
               onChange={handleChange}
-              value={inputs.rowLength}
+              value={inputs.rows}
             />
           </div>
           <div className="form__input">
-            <label htmlFor="columnLength">column length</label>
+            <label htmlFor="cols">column length</label>
             <input
               type="text"
               onChange={handleChange}
-              value={inputs.columnLength}
+              value={inputs.cols}
               placeholder="number ..."
-              name="columnLength"
-              id="columnLength"
+              name="cols"
+              id="cols"
             />
           </div>
 
           <div className="form__input">
-            <label htmlFor="leadingZero">leading zero</label>
+            <label htmlFor="paddNum">leading zero</label>
             <select
-              name="leadingZero"
-              id="leadingZero"
+              name="paddNum"
+              id="paddNum"
               onChange={handleChange}
-              value={inputs.leadingZero}
+              value={inputs.paddNum}
             >
               <option value="1">0X</option>
               <option value="2">00X</option>
@@ -123,12 +137,12 @@ export default function Form() {
             />
           </div>
           <div className="form__input">
-            <label htmlFor="incrementType">increment type</label>
+            <label htmlFor="type">increment type</label>
             <select
-              name="incrementType"
-              id="incrementType"
+              name="type"
+              id="type"
               onChange={handleChange}
-              value={inputs.incrementType}
+              value={inputs.type}
             >
               <option value="number">number</option>
               <option value="barcode">barcode</option>
