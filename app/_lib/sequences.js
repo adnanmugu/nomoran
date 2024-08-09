@@ -114,10 +114,3 @@ export default class Sequences extends Files {
     return array[array.length - 1];
   }
 }
-
-const testo = new Sequences('usep', 'number', 3, 2, 10, 1, 4);
-const rowstes = testo.getrowsValue();
-const rowseq = testo.getSequence(rowstes);
-
-// console.log(testo.getSequence(rowstes));
-console.log(testo.getLastValue(rowseq));
