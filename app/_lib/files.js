@@ -11,7 +11,14 @@ export default class Files {
     this.fileCount = fileCount;
   }
 
-  generateCsv(isOneFile, data, filename) {
+  /**
+   * return fileCount property
+   */
+  get getCount() {
+    return this.fileCount;
+  }
+
+  generateCsv(data, filename) {
     // Transform the array into columns for CSV
     // Determine the maximum length of the sub-arrays
     const head = [];
