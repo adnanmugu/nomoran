@@ -23,7 +23,7 @@
   "homepage": "https://github.com/adnanmugu/nomoran#readme",
   "dependencies": {
     "archiver": "^7.0.1",
-    "convert-array-to-csv": "^2.0.0",
+    "csv-stringify": "^6.5.1",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",
     "next": "^14.2.4",
