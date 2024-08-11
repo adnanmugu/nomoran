@@ -14,7 +14,6 @@ export default function initilizeFile(data) {
     paddNum
   );
 
-  // const rowsVal = proj.getrowsValue();
   const sequence = proj.getSequence(proj.getrowsValue());
-  return sequence;
+  proj.generateCsvFiles(sequence);
 }
