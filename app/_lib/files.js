@@ -53,7 +53,7 @@ export default class Files {
           return;
         }
         // Write the CSV output to a file
-        const filePath = `./output_${index}.csv`;
+        const filePath = `../../pages/temp/${this.name}_${index}.csv`;
         fs.writeFileSync(filePath, output);
         console.log(`CSV file generated: ${filePath}`);
       });
