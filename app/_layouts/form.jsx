@@ -1,16 +1,16 @@
 'use client'; // This is a client component
-import React, { useState } from 'react';
 import initilizeFile from 'app/_lib/app';
+import React, { useState } from 'react';
 
 export default function Form() {
   const [count, setCount] = useState(1);
   const [inputs, setInputs] = useState({
-    fileName: '',
+    fileName: 'Untitled',
     rows: '',
     cols: '',
     paddNum: '1',
     firstValue: '',
-    incrementType: 'number',
+    type: 'number',
   });
 
   const handleIncrement = () => {
@@ -34,29 +34,17 @@ export default function Form() {
     event.preventDefault();
     // Process the form data as needed
 
-    // const datas = {
-    //   fileName: inputs.fileName,
-    //   rowLength: inputs.rowLength,
-    //   columnLength: inputs.columnLength,
-    //   leadingZero: inputs.leadingZero,
-    //   firstValue: inputs.firstValue,
-    //   incrementType: inputs.incrementType,
-    //   fileCount: count,
-    // };
-    // initilizeFile(datas);
+    const datas = {
+      fileName: inputs.fileName,
+      rows: inputs.rows,
+      cols: inputs.cols,
+      paddNum: inputs.paddNum,
+      firstValue: inputs.firstValue,
+      type: inputs.type,
+      fileCount: count,
+    };
+    initilizeFile(datas);
   };
-
-  const datas = {
-    fileName: 'lembang',
-    type: 'number',
-    rows: 2,
-    cols: 10,
-    paddNum: 3,
-    firstValue: 1,
-    fileCount: 2,
-  };
-  const result = initilizeFile(datas);
-  console.log(result);
 
   return (
     <form className="form" onSubmit={handleSubmit}>
