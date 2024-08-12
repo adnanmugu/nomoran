@@ -1,4 +1,4 @@
-import Files from './files.js';
+import Files from 'app/_lib/files';
 
 export default class Sequences extends Files {
   /**
