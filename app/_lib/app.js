@@ -1,5 +1,4 @@
-import Files from './files.js';
-import Sequences from './sequences.js';
+import Sequences from 'app/_lib/sequences.js';
 
 export default function initilizeFile(data) {
   const { fileName, type, fileCount, rows, cols, paddNum, firstValue } = data;
@@ -14,6 +13,6 @@ export default function initilizeFile(data) {
     paddNum
   );
 
-  const sequence = proj.getSequence(proj.getrowsValue());
-  proj.generateCsvFiles(sequence);
+  const rowsValue = proj.getrowsValue();
+  const sequence = proj.getSequence(rowsValue);
 }

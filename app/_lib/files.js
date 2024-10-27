@@ -1,5 +1,4 @@
-import JSZip from 'jszip';
-import { saveAs } from 'file-saver';
+import fs from 'fs';
 import { stringify } from 'csv-stringify';
 
 export default class Files {
@@ -33,8 +32,6 @@ export default class Files {
    * @param {Array} array - 3d array containing data for .csv files.
    */
   generateCsvFiles(array) {
-    const zip = new JSZip();
-
     array.forEach((innerArray, index) => {
       const headers = innerArray.map((_, i) => `#${i + 1}`);
 
@@ -57,24 +54,10 @@ export default class Files {
           return;
         }
         // Write the CSV output to a file
-        // const filePath = `../../pages/temp/${this.name}_${index}.csv`;
-        // fs.writeFileSync(filePath, output);
-        // console.log(`CSV file generated: ${filePath}`);
-        const fileName = `${this.name}_${index}.csv`;
-
-        zip.file(fileName, output);
-        console.log(`csv file add to .zip: ${fileName}`);
+        const filePath = `../../pages/temp/${this.name}_${index}.csv`;
+        fs.writeFileSync(filePath, output);
+        console.log(`CSV file generated: ${filePath}`);
       });
     });
-
-    zip
-      .generateAsync({ type: 'blob' })
-      .then((content) => {
-        saveAs(content, `${this.name}.zip`);
-        console.log('.zip file generated and downloaded.');
-      })
-      .catch((err) => {
-        console.error('error generating zip file:', err);
-      });
   }
 }

@@ -1,11 +1,10 @@
 'use client'; // This is a client component
-import initilizeFile from 'app/_lib/app';
 import React, { useState } from 'react';
 
 export default function Form() {
   const [count, setCount] = useState(1);
   const [inputs, setInputs] = useState({
-    fileName: 'Untitled',
+    fileName: '',
     rows: '',
     cols: '',
     paddNum: '1',
@@ -35,7 +34,7 @@ export default function Form() {
     // Process the form data as needed
 
     const datas = {
-      fileName: inputs.fileName,
+      fileName: inputs.fileName === '' ? 'Untitled' : inputs.fileName,
       rows: inputs.rows,
       cols: inputs.cols,
       paddNum: inputs.paddNum,
@@ -43,7 +42,6 @@ export default function Form() {
       type: inputs.type,
       fileCount: count,
     };
-    initilizeFile(datas);
   };
 
   return (
