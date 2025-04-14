@@ -20,3 +20,5 @@ Additionally, it automatically saves the generated sequence in either CSV or RTF
 # Support
 
 If you wish to support further development and feel extra awesome, you can donate on [trakteer](https://www.trakteer.com)
+
+translate : [Indonesia]()
